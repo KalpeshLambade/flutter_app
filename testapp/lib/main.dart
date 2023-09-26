@@ -1,50 +1,44 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(
-    MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        backgroundColor: const Color.fromARGB(255, 66, 120, 147),
-        appBar: AppBar(
-          title: const Text('Kalpesh\'s App'),
-          backgroundColor: Colors.blueGrey[900],
-        ),
-        body: Container(
-          height: 100.0,
-          color: Colors.black38,
-          child: Center(
-            child: Row(
+  runApp(MaterialApp(
+    debugShowCheckedModeBanner: false,
+    home: Scaffold(
+      backgroundColor: Colors.blueGrey[900],
+      appBar:AppBar(
+        title: const Text('My app'),
+        backgroundColor: Colors.amber[800],
+      ) ,
+      body:SafeArea(
+        child:Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: <Widget>[
+            Container(
+              width: 100.0,
+              color: Colors.red,
+            ),
+             Column(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 Container(
                   width: 100.0,
-                  height: 50.0,
-                  color: Colors.red,
-                  child:const Text('Container 1'),
-                ),
-                const SizedBox(
-                  width: 10.0,
-                ),
-                Container(
-                  width: 100.0,
-                  height: 50.0,
-                  color: Colors.blue,
-                  child:const Text('Container 2'),
-                ), 
-                const SizedBox(
-                  width: 10.0,
-                ),
-                Container(
-                  width: 100.0,
-                  height: 50.0,
+                  height: 100.0,
                   color: Colors.green,
-                  child:const Text('Container 3'),
-                ),
+                ), 
+                Container(
+                  width: 100.0,
+                  height: 100.0,
+                  color: Colors.blue,
+                )
               ],
-            ),
-          ),
-        ),
-      ),
+                       ),
+            Container(
+              width: 100.0,
+              color: Colors.yellow,
+            ) 
+          ],
+        ) ,
+      ) ,
     ),
-  );
+  ));
 }
